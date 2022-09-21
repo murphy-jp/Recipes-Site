@@ -1,0 +1,56 @@
+a {
+    color: gray;
+}
+
+a:hover {
+    color: orange;
+}
+#odinTitle,
+.foodTitle {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: 80px;
+    text-shadow: 0 0 10px rgb(253, 186, 0)
+}
+
+li {
+    padding-bottom: 10px;
+    list-style: none;
+    text-align: center;
+    padding-left: none;
+}
+
+.mainIMG {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 50%;
+}
+
+.pDesc,
+h2 {
+    text-align: center;
+}
+
+h2 {
+    background-color: black;
+    color: white;
+    font-weight: 800px;
+}
+
+ol.steps {
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+}
+
+ul.steps {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 800;
+    font-size: 40px;
+}
+
+a.homeButton {
+    font-size: 50px;
+    margin-left: 90%;
+}
