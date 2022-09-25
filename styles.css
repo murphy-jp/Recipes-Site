@@ -1,56 +1,331 @@
+/* Importing a custom font for the header-title */
+@font-face { 
+    font-family: "BungeeSpice-Regular"; 
+    src: url("Bungee_Spice/BungeeSpice-Regular.ttf"); 
+} 
+
+/* Importing a custom font for main website fone */
+@font-face { 
+    font-family: "OpenSans-VariableFont"; 
+    src: url("Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf"); 
+} 
+
+/* Importing a custom font for main website fone */
+@font-face { 
+    font-family: "OpenSans-VariableFont-Italic"; 
+    src: url("Open_Sans/OpenSans-Italic-VariableFont_wdth,wght.ttf"); 
+} 
+
 a {
     color: gray;
+    /*Adding imported font for text styling*/
+    font-family: "OpenSans-VariableFont";
 }
-
+/* Adding hover styling to any article elements*/
 a:hover {
     color: orange;
 }
-#odinTitle,
-.foodTitle {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: bold;
-    text-align: center;
-    font-size: 80px;
-    text-shadow: 0 0 10px rgb(253, 186, 0)
+
+/* WRAPPER FOR HEADER/CONTENT CONTAINERS */
+.wrapper-1{
+    /* Setting backgroud color to a dark navy */
+    background-color:      #1F2937 ;
 }
 
-li {
-    padding-bottom: 10px;
-    list-style: none;
-    text-align: center;
-    padding-left: none;
+
+/* HEADER/NAVIGATION BAR */
+
+#header {
+    /* Setting display to Flex for the 'header' container */
+    display: flex;
+
+    /* Adding space between the elements to push them to opposite side of the container */
+    justify-content: space-between;
+
+    /* Centering the elements vertically */
+    align-items: center;
+
+    /* Adding top/bottom padding of 20px and right/left padding of 100px*/
+    padding: 20px 100px;
+
+    /* Setting wrap property so elements stack/wrap when zoomed */
+    flex-wrap: wrap;
+    
+    /* Setting the imported font as default for the header items*/
+    font-family: "BungeeSpice-Regular";
+
 }
 
-.mainIMG {
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
-    width: 50%;
-}
-
-.pDesc,
-h2 {
-    text-align: center;
-}
-
-h2 {
-    background-color: black;
-    color: white;
-    font-weight: 800px;
-}
-
-ol.steps {
-    font-family: Arial, Helvetica, sans-serif;
-    font-style: italic;
-}
-
-ul.steps {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-weight: 800;
+/* Logo/name of website */
+.header-title {
+    /* Imported text has a default color,weight, so these properties weren't set */
+    /* Setting size of text to 40 */
     font-size: 40px;
+
 }
 
-a.homeButton {
+/* Links at right hand side of header */
+#header ul {
+    /* Setting display to Flex for the ul items. By default these should be displayed as row items */
+    display: flex;
+
+    /* Removing the automatic bullet points from list items */
+    list-style: none;
+
+    /* Adding a gap between list items */
+    gap: 24px;
+
+    /* Setting size of text to 40 */
+    font-size: 20px;
+
+}
+
+
+/* CONTAINER FOR MAIN CONTENT SECTION (TEXT/IMAGE) */
+#container-content{
+    /* Setting the display property to flex */   
+    display: flex;
+
+    /* Adding a dap of 40px between items */   
+    gap: 40px;
+
+
+    /* Spacing content out between size of container */
+    justify-content: space-between;
+    
+    /*Setting right/left padding as 100px + top/bottom padding to 120px*/
+    padding: 120px 100px;  
+}
+
+/*Both child containers of content section share this class.*/
+.container-header {
+    /*Setting width of items to 40% of container*/
+    width: 40%;
+    /*Setting text color a shade of white*/
+    color: #F9FAF8;
+    /*Setting the default flex values*/
+    flex: 1;
+    /*Adding imported font for text styling*/
+    font-family: "OpenSans-VariableFont-Italic";
+
+    font-style: italic;
+    
+}
+
+/* Adding stype for the h1 element of the content container header*/
+.container-header h1{
+    /*Setting text color to white*/
+    color: white;
+
+    /*Setting font size to 48px*/
+    font-size: 48px;
+    /*Setting font weight to 900 thickness*/    
+    font-weight: 900;
+    
+}
+
+/* Adding stype for the paragraph element of the content container header*/
+.container-header p{
+    /*Setting text color to a shade of white*/
+    color: #E5E7EB;
+    /*Setting font size to 18px*/
+    font-size: 18px;
+    /*Setting font weight to 900 thickness*/  
+    font-weight: 900;
+
+    
+}
+
+/* Adding stype for the image element of the content container header*/
+.container-header img {
+    /*Setting the width of image to 100% of the container*/
+    width: 100%;
+}
+
+/* WRAPPER FOR ITEMS LIST CONTAINER */
+.wrapper-2 {
+    /* Setting backgroud color to a white */
+    background-color: white;  
+}
+
+/* Text being displayed aqbove receipes flex box list*/
+.page-info {
+    font-size: 58px;
+    font-weight: 900;
+    color: #1F2937;
+    text-align: center;
+    padding: 20px;
+    /*Adding imported font for text styling*/
+    font-family: "OpenSans-VariableFont";   
+}
+
+/*Sign up button within main content area*/
+.sign-up{
+    /*Setting background color of button to blue*/
+    background-color:   #3882F6;
+    /*Setting tect color of button to white*/
+    color: white;
+    /*Adding some padding for the content*/
+    padding: 10px 40px;
+    /*Setting font size and weight*/
+    font-size: 20px;
+    font-weight: 800;
+    /*Rounding the corner of the button*/
+    border-radius: 15px;
+}
+
+/* CONTAINER FOR QUOTE SECTION*/
+#container-2 {
+    /*Setting the dispaly property to flex*/
+    display: flex;    
+}
+
+/*Setting to properties for the ul list of container-2*/
+#container-2 ul{
+    /*Setting the dispaly property to flex*/
+    display: flex;
+    /*Setting default Flex values so items are default size and grow/shrink at same ratio*/
+    flex:1;
+    /*Removing deault bullet points from ul*/
+    list-style: none;
+    /*Aligning the text to the center of each item*/
+    text-align: center;
+    /*Adding a gap of 20px to each list item*/ 
+    gap: 20px;
+    /*content should use full width with space between items*/
+    justify-content: space-between;
+    /*Adding wrap to items so the list starts new row when zooming*/
+    flex-wrap: wrap;
+}
+
+/*Setting to properties for the images used in the receipes list*/
+.page-items img {
+    /*Setting default height and width*/
+    height:250px;
+    width: 350px;
+    /*Adding border, defining thickness, type and color*/
+    border: 4px solid #3882F6;
+    /*Rounding the corners of the border/img*/
+    border-radius: 15px;
+}
+
+.page-items a{
+    font-size: 150%;
+}
+
+/* WRAPPER FOR ITEMS QUOTE CONTAINER */
+.wrapper-3 {
+    /* Setting backgroud color to a light grey */
+    background-color: #E5E7EB;  
+
+    /* Setting the display property to flex */    
+    display:flex;
+
+    /* Setting flex direction to column as we have two items stacked vertically */
+    flex-direction: column;
+
+    /* Adding a margin of 50px from the top of this container */
+    margin-top: 50px;
+
+
+}
+
+/*Quote text*/
+.info-top {
+    /* Setting text color to a shade of black*/
+    color: #1F2937;
+    /*Setting the font size for the quote text*/
     font-size: 50px;
-    margin-left: 90%;
+    /*Adding imported font for text styling*/
+    font-family: "OpenSans-VariableFont";
+    /*Setting display property to flex*/
+    display: flex;
+    /*Setting content starting position to the left side of the container*/
+    justify-content: flex-start;
+    /*Setting fonr to italic style*/
+    font-style: italic;
+    /*Adding padding to the top/bottom of the content*/
+    padding-top: 100px;
+    padding-bottom: 20px;
+}
+
+/*Quote text - name of quoter*/
+.info-bottom {
+    /* Setting text color to black*/
+    color: black;
+    /*Setting the font size for the quote text*/
+    font-size: 60px;
+    /*Adding imported font for text styling*/
+    font-family: "OpenSans-VariableFont";
+    /*Setting display property to flex*/
+    display: flex;
+    /*Setting content starting position to the right side of the container*/
+    justify-content: flex-end;
+    /*Adding padding to the bottom of the content*/
+    padding-bottom: 100px;
+}
+
+
+
+/* WRAPPER FOR FOOTER CONTAINER */
+.wrapper-4{
+    /* Setting backgroud color to white*/
+    background-color: white;
+}
+
+.wrapper-1,
+.wrapper-4 {
+    /* Setting content size for the 1st and 4th sections */
+    padding: 0 175px;
+}
+.wrapper-2,
+.wrapper-3 {
+    /* Setting content size for the 2nd and 3rd sections */
+    padding: 0 300px;  
+}
+
+
+/* CONTAINER FOR THE FOOTER ITEMS */
+.footer {
+    /*Setting the background color for this container to blue*/
+    background-color:   #3882F6;
+    /*Setting text color to white*/
+    color: white;
+    /*Adding some padding for the content*/
+    padding-left: 125px;
+    padding-right: 125px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    /*Adding a margin top/bottom to keep the white space*/
+    margin: 50px 0;
+    /*Setting display property to flex*/
+    display: flex;
+    /*Adding space between items/pushing to opposite side of container*/
+    justify-content: space-between;
+    /*Centering items vertically within the container*/
+    align-items: center;
+    /*Rounding the corners of the container/border*/
+    border-radius: 10px;
+    /*Adding imported font for text styling*/
+    font-family: "OpenSans-VariableFont";
+}
+
+
+
+/*Sign up button within footer content area*/
+.sign-up-inverted{
+    /*Setting background color of button to blue*/
+    background-color:   #3882F6;
+    /*Setting tect color of button to white*/
+    color: white;
+    /*Adding some padding for the content*/
+    padding: 10px 40px;
+    /*Setting font size and weight*/
+    font-size: 20px;
+    font-weight: 800;
+    /*Rounding the corner of the button*/
+    border-radius: 15px;
+    /*Setting some other border properties*/
+    border-color: white;
+    border-width: 3px;
 }
